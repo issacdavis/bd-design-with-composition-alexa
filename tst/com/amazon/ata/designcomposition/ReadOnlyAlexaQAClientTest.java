@@ -19,7 +19,7 @@ class ReadOnlyAlexaQAClientTest {
     public void introspection_readOnlyAlexaQAClient_hasConstructorWithClient() {
         // GIVEN
         Class<?> readOnlyAlexaQAClientClass = getClassForName(
-                "com.amazon.ata.designcomposition.prework.ReadOnlyAlexaQAClient");
+                "com.amazon.ata.designcomposition.ReadOnlyAlexaQAClient");
 
         // WHEN
         Constructor<?> findBestAnswerMethod = null;
@@ -39,7 +39,7 @@ class ReadOnlyAlexaQAClientTest {
     public void introspection_readOnlyAlexaQAClient_hasASinglePublicMethod() {
         // GIVEN
         Class<?> readOnlyAlexaQAClientClass = getClassForName(
-            "com.amazon.ata.designcomposition.prework.ReadOnlyAlexaQAClient");
+            "com.amazon.ata.designcomposition.ReadOnlyAlexaQAClient");
 
         // WHEN
         Method[] publicMethods = Arrays.stream(readOnlyAlexaQAClientClass.getDeclaredMethods())
@@ -62,7 +62,7 @@ class ReadOnlyAlexaQAClientTest {
     public void introspection_readOnlyAlexaQAClient_isNotAlexaQAClient() {
         // GIVEN
         Class<?> readOnlyAlexaQAClientClass = getClassForName(
-            "com.amazon.ata.designcomposition.prework.ReadOnlyAlexaQAClient");
+            "com.amazon.ata.designcomposition.ReadOnlyAlexaQAClient");
 
         // WHEN
         boolean isAlexaQAClient = AlexaQAClient.class.isAssignableFrom(readOnlyAlexaQAClientClass);
