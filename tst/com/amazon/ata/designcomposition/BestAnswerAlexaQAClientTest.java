@@ -21,7 +21,7 @@ public class BestAnswerAlexaQAClientTest {
     public void introspection_bestAnswerAlexaQAClient_hasConstructorWithClient() {
         // GIVEN
         Class<?> bestAnswerAlexaQAClientClass = getClassForName(
-                "com.amazon.ata.designcomposition.prework.BestAnswerAlexaQAClient");
+                "com.amazon.ata.designcomposition.BestAnswerAlexaQAClient");
 
         // WHEN
         Constructor<?> findBestAnswerMethod = null;
@@ -41,7 +41,7 @@ public class BestAnswerAlexaQAClientTest {
     public void introspection_bestAnswerAlexaQAClient_hasFindBestAnswerMethod() {
         // GIVEN
         Class<?> bestAnswerAlexaQAClientClass = getClassForName(
-            "com.amazon.ata.designcomposition.prework.BestAnswerAlexaQAClient");
+            "com.amazon.ata.designcomposition.BestAnswerAlexaQAClient");
 
         // WHEN
         Method findBestAnswerMethod = null;
@@ -62,7 +62,7 @@ public class BestAnswerAlexaQAClientTest {
     public void introspection_bestAnswerAlexaQAClient_hasSubmitQuestionAnswerSuggestions() {
         // GIVEN
         Class<?> bestAnswerAlexaQAClientClass = getClassForName(
-            "com.amazon.ata.designcomposition.prework.BestAnswerAlexaQAClient");
+            "com.amazon.ata.designcomposition.BestAnswerAlexaQAClient");
 
         // WHEN
         Method submitQuestionAnswerSuggestionsMethod = null;
@@ -83,7 +83,7 @@ public class BestAnswerAlexaQAClientTest {
     public void introspection_readOnlyAlexaQAClient_isNotAlexaQAClient() {
         // GIVEN
         Class<?> bestAnswerAlexaQAClientClass = getClassForName(
-            "com.amazon.ata.designcomposition.prework.BestAnswerAlexaQAClient");
+            "com.amazon.ata.designcomposition.BestAnswerAlexaQAClient");
 
         // WHEN
         boolean isAlexaQAClient = AlexaQAClient.class.isAssignableFrom(bestAnswerAlexaQAClientClass);
@@ -104,17 +104,17 @@ public class BestAnswerAlexaQAClientTest {
 
     // Actual test, uncomment after implementation of BestAnswerAlexaQAClient is done
 
-//    @Test
-//    public void findBestAnswer_anyQuestion_expectedAnswer() {
-//        // GIVEN
-//    AlexaQA alexaQa = new AlexaQAClient();
-//        BestAnswerAlexaQAClient client = new BestAnswerAlexaQAClient(alexaQa);
-//
-//        // WHEN
-//        AlexaAnswer answer = client.findBestAnswer(new AlexaQuestion("random question", 1L));
-//
-//        // THEN
-//        assertEquals(0.18, answer.getAnswerQuality());
-//        assertEquals("May the Force be with you.", answer.getContent());
-//    }
+    @Test
+    public void findBestAnswer_anyQuestion_expectedAnswer() {
+        // GIVEN
+    AlexaQA alexaQa = new AlexaQAClient();
+        BestAnswerAlexaQAClient client = new BestAnswerAlexaQAClient(alexaQa);
+
+        // WHEN
+        AlexaAnswer answer = client.findBestAnswer(new AlexaQuestion("random question", 1L));
+
+        // THEN
+        assertEquals(0.18, answer.getAnswerQuality());
+        assertEquals("May the Force be with you.", answer.getContent());
+    }
 }

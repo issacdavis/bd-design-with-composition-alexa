@@ -83,15 +83,15 @@ class ReadOnlyAlexaQAClientTest {
 
     // Actual test, uncomment after implementation of ReadOnlyAlexaQAClient is done
 
-//    @Test
-//    public void findAnswers_anyQuestion_expectedNumberOfAnswers() {
-//        // GIVEN
-//        ReadOnlyAlexaQAClient client = new ReadOnlyAlexaQAClient(new AlexaQAClient());
-//
-//        // WHEN
-//        List<AlexaAnswer> answers = client.findAnswers(new AlexaQuestion("random question", 1L));
-//
-//        // THEN
-//        assertEquals(6, answers.size());
-//    }
+    @Test
+    public void findAnswers_anyQuestion_expectedNumberOfAnswers() {
+        // GIVEN
+        ReadOnlyAlexaQAClient client = new ReadOnlyAlexaQAClient(new AlexaQAClient());
+
+        // WHEN
+        List<AlexaAnswer> answers = client.findAnswers(new AlexaQuestion("random question", 1L));
+
+        // THEN
+        assertEquals(6, answers.size());
+    }
 }

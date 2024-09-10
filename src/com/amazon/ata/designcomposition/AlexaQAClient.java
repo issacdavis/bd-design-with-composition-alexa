@@ -28,6 +28,18 @@ public class AlexaQAClient implements AlexaQA {
     // Stores the suggested answers for the provided questions
     private final List<AlexaAnswer> suggestedAnswers = new ArrayList<>();
 
+    public List<AlexaAnswer> getAnswers() {
+        return answers;
+    }
+
+    public List<AlexaQuestion> getSuggestedQuestions() {
+        return suggestedQuestions;
+    }
+
+    public List<AlexaAnswer> getSuggestedAnswers() {
+        return suggestedAnswers;
+    }
+
     @Override
     public List<AlexaAnswer> findAnswers(AlexaQuestion question) {
         System.out.println("Searching an answer for the question: " + question.getContent());
